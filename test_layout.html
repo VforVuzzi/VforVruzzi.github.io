@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idris Vruzhaj - Biotechnologist & Data Analyst</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            /* Nuovi colori: Blu profondo e verde acqua */
+            background: linear-gradient(135deg, #4A00E0 0%, #8E2DE2 100%); /* Deep Blue to Violet */
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            position: relative;
+            box-shadow: 0 0 50px rgba(0,0,0,0.1);
+        }
+
+        /* Decorative elements */
+        .floating-shape {
+            position: absolute;
+            border-radius: 20px;
+            opacity: 0.8;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .shape-1 {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #00BCD4 0%, #00E5FF 100%); /* Cyan to Light Blue */
+            top: 10%;
+            right: 10%;
+            transform: rotate(15deg);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape-2 {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #FF6F00 0%, #FF9100 100%); /* Orange to Gold */
+            top: 30%;
+            left: 8%;
+            transform: rotate(-20deg);
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        .shape-3 {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #A8FF78 0%, #78FFD6 100%); /* Light Green to Aqua */
+            bottom: 25%;
+            right: 5%;
+            transform: rotate(25deg);
+            animation: float 7s ease-in-out infinite;
+        }
+
+        .shape-4 {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #FFC0CB 0%, #FFD700 100%); /* Pink to Gold */
+            bottom: 40%;
+            left: 5%;
+            transform: rotate(-15deg);
+            animation: float 9s ease-in-out infinite reverse;
+        }
+
+        .shape-5 {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #BBDEFB 0%, #E3F2FD 100%); /* Light Blue to Pale Blue */
+            top: 55%;
+            right: 15%;
+            transform: rotate(45deg);
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .dna-helix {
+            position: absolute;
+            top: 20%;
+            left: 2%;
+            width: 60px;
+            height: 200px;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(10deg); }
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 60px;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(74, 0, 224, 0.1); /* Nuovi colori */
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-left {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-left a {
+            color: #4A00E0; /* Nuovi colori */
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-left a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #4A00E0, #8E2DE2); /* Nuovi colori */
+            transition: width 0.3s ease;
+        }
+
+        .nav-left a:hover::after {
+            width: 100%;
+        }
+
+        .nav-left a:hover {
+            color: #8E2DE2; /* Nuovi colori */
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4A00E0 0%, #8E2DE2 100%); /* Nuovi colori */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(74, 0, 224, 0.3); /* Nuovi colori */
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(74, 0, 224, 0.4); /* Nuovi colori */
+        }
+
+        .header {
+            padding: 80px 60px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            background: linear-gradient(135deg, rgba(74, 0, 224, 0.05) 0%, rgba(142, 45, 226, 0.05) 100%); /* Nuovi colori */
+        }
+
+        .profile-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, #4A00E0 0%, #8E2DE2 100%); /* Nuovi colori */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: white;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(74, 0, 224, 0.3); /* Nuovi colori */
+            border: 4px solid white;
+        }
+
+        .profile-photo::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #00BCD4, #00E5FF, #FF6F00, #FF9100); /* Nuovi colori */
+            z-index: -1;
+            animation: rotate 3s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #4A00E0 0%, #8E2DE2 100%); /* Nuovi colori */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 400;
+            color: #00BCD4; /* Nuovi colori */
+            margin-bottom: 30px;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .transition-badge {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #FF6F00 0%, #FF9100 100%); /* Nuovi colori */
+            color: white;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .main-content {
+            padding: 80px 60px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section {
+            margin-bottom: 100px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, #4A00E0 0%, #8E2DE2 100%); /* Nuovi colori */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #00BCD4, #00E5FF); /* Nuovi colori */
+            border-radius: 2px;
+        }
+
+        .experience-grid {
+            display: grid;
+            gap: 40px;
+        }
+
+        .experience-item {
+            padding: 35px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%);
+            border-radius: 20px;
+            border: 1px solid rgba(74, 0, 224, 0.1); /* Nuovi colori */
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #4A00E0, #8E2DE2, #00BCD4); /* Nuovi colori */
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .experience-item:hover::before {
+            transform: scaleX(1);
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(74, 0, 224, 0.15); /* Nuovi colori */
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .job-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            font-size: 1.1rem;
+            color: #4A00E0; /* Nuovi colori */
+            font-weight: 500;
+        }
+
+        .date {
+            color: white;
+            font-size: 0.95rem;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #4A00E0 0%, #8E2DE2 100%); /* Nuovi colori */
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .job-description {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%);
+            padding: 35px;
+            border-radius: 20px;
+            border: 1px solid rgba(74, 0, 224, 0.1); /* Nuovi colori */
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-3px);
+        }
+
+        .skill-category h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-category h3 i {
+            color: #4A00E0; /* Nuovi colori */
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #4A00E0 0%, #8E2DE2 100%); /* Nuovi colori */
+            color: white;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(74, 0, 224, 0.2); /* Nuovi colori */
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(74, 0, 224, 0.3); /* Nuovi colori */
+        }
+
+        .education-item {
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%);
+            border-radius: 20px;
+            border-left: 4px solid #00BCD4; /* Nuovo colore */
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .education-item:hover {
+            transform: translateX(5px);
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #1A1A1A 0%, #2D3748 100%); /* Mantenuco scuro per contrasto */
+            color: white;
+            padding: 80px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(74,0,224,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat; /* Nuovi colori */
+            opacity: 0.3;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-description {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-item i {
+            font-size: 2rem;
+            color: #4A00E0; /* Nuovo colore */
+            margin-bottom: 15px;
+        }
+
+        .contact-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .contact-item p {
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                padding: 20px 30px;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-left {
+                gap: 20px;
+            }
+
+            .header {
+                padding: 60px 30px;
+            }
+
+            .main-content {
+                padding: 60px 30px;
+            }
+
+            .contact-section {
+                padding: 60px 30px;
+            }
+
+            .contact-info {
+                gap: 30px;
+            }
+
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+                font-size: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+        <div class="floating-shape shape-5"></div>
+
+        <div class="dna-helix">
+            <svg viewBox="0 0 60 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 10 Q30 50 10 90 Q30 130 10 170 Q30 190 50 190" stroke="#4A00E0" stroke-width="2" fill="none"/>
+                <path d="M50 10 Q30 50 50 90 Q30 130 50 170 Q30 190 10 190" stroke="#00BCD4" stroke-width="2" fill="none"/>
+            </svg>
+        </div>
+
+        <nav class="nav">
+            <div class="nav-left">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-right">
+                <a href="mailto:idris.vruzhaj@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+            </div>
+        </nav>
+
+        <header class="header">
+            <div class="profile-photo">
+                <i class="fas fa-dna"></i>
+            </div>
+            <h1 class="hero-title">Ciao. Sono Idris.</h1>
+            <h2 class="hero-subtitle">Biotechnologist & Data Analyst</h2>
+            <p class="hero-description">
+                Biotecnologo con Ph.D. in Scienze Farmacologiche, specializzato nella gestione di progetti complessi 
+                e nello sviluppo di soluzioni innovative. La mia esperienza in ambiente multiculturale ha affinato 
+                le mie capacità di adattabilità e collaborazione interdisciplinare.
+            </p>
+            <div class="transition-badge">
+                🔬 → 📊 Transitioning to Bioinformatics & ML
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="section" id="experience">
+                <h2 class="section-title">Esperienza Lavorativa</h2>
+                <div class="experience-grid">
+                    <div class="experience-item">
+                        <div class="job-header">
+                            <div>
+                                <h3 class="job-title">Postdoctoral Researcher</h3>
+                                <p class="company">CRO Aviano (Aviano, Italy)</p>
+                            </div>
+                            <span class="date">11/2023 - Presente</span>
+                        </div>
+                        <p class="job-description">
+                            Continuazione del progetto di dottorato, sviluppo di vaccini basati su probiotici. 
+                            Conduzione di ricerche avanzate nel campo dell'immunoterapia oncologica e analisi 
+                            di dati biologici complessi utilizzando tecniche computazionali.
+                        </p>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="job-header">
+                            <div>
+                                <h3 class="job-title">Research Scientist</h3>
+                                <p class="company">CRO Aviano (Aviano, Italy)</p>
+                            </div>
+                            <span class="date">09/2020 - 10/2023</span>
+                        </div>
+                        <p class="job-description">
+                            Sviluppo di vaccini antitumorali utilizzando vettori probiotici. Progettazione e 
+                            implementazione di esperimenti, analisi statistica dei dati, e collaborazione con 
+                            team multidisciplinari per l'avanzamento della ricerca oncologica.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="skills">
+                <h2 class="section-title">Competenze</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> Programming & Data Analysis</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">Scikit-learn</span>
+                            <span class="skill-tag">Matplotlib</span>
+                            <span class="skill-tag">Seaborn</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-microscope"></i> Biotechnology & Research</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Molecular Biology</span>
+                            <span class="skill-tag">Immunology</span>
+                            <span class="skill-tag">Microbiology</span>
+                            <span class="skill-tag">Cell Culture</span>
+                            <span class="skill-tag">PCR/qPCR</span>
+                            <span class="skill-tag">Flow Cytometry</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-chart-line"></i> Data Science & ML</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Statistical Analysis</span>
+                            <span class="skill-tag">Data Visualization</span>
+                            <span class="skill-tag">Bioinformatics</span>
+                            <span class="skill-tag">Big Data Analysis</span>
+                            <span class="skill-tag">Genomics</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-tools"></i> Tools & Software</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MS Office Suite</span>
+                            <span class="skill-tag">Jupyter Notebook</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">R (Basic)</span>
+                            <span class="skill-tag">ImageJ</span>
+                            <span class="skill-tag">GraphPad Prism</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="education">
+                <h2 class="section-title">Formazione</h2>
+                
+                <div class="education-item">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-title">Ph.D. in Pharmacological Sciences</h3>
+                            <p class="company">University of Padua</p>
+                        </div>
+                        <span class="date">2020 - 2023</span>
+                    </div>
+                    <p class="job-description">
+                        <strong>Tesi:</strong> "Oral Delivery of Glypican 1 via Engineered Escherichia coli Nissle 1917: 
+                        An Immunogenic Anticancer Therapy Approach." Sviluppo di un vaccino basato su probiotici 
+                        per la terapia anticancro.
+                    </p>
+                </div>
+
+                <div class="education-item">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-title">Master's Degree in Industrial Biotechnology</h3>
+                            <p class="company">University of Padua</p>
+                        </div>
+                        <span class="date">2016 - 2019</span>
+                    </div>
+                    <p class="job-description">
+                        Specializzazione in analisi biotecnologiche avanzate e applicazioni industriali. 
+                        Focus su bioprocessi, biotecnologie molecolari e analisi dati.
+                    </p>
+                </div>
+
+                <div class="education-item">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-title">Bachelor's Degree in Biotechnology</h3>
+                            <p class="company">University of Padua</p>
+                        </div>
+                        <span class="date">2012 - 2015</span>
+                    </div>
+                    <p class="job-description">
+                        Fondamenti delle tecniche di laboratorio biotecnologico, biologia molecolare 
+                        e cellulare, biochimica e microbiologia.
+                    </p>
+                </div>
+
+                <div class="education-item">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-title">Data Analysis in Python</h3>
+                            <p class="company">Utrecht Summer School</p>
+                        </div>
+                        <span class="date">2022</span>
+                    </div>
+                    <p class="job-description">
+                        Corso intensivo sull'analisi di big data utilizzando Python e Pandas. 
+                        Tecniche avanzate di manipolazione dati e visualizzazione.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <section class="contact-section" id="contact">
+            <h2 class="contact-title">Collaboriamo Insieme</h2>
+            <p class="contact-description">
+                Sono attivamente alla ricerca di opportunità nel campo della bioinformatica, data analysis 
+                e machine learning applicato alle scienze biologiche. Contattami per discutere di progetti innovativi.
+            </p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>idris.vruzhaj@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h4>Telefono</h4>
+                    <p>+39 3450761301</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Ubicazione</h4>
+                    <p>Porcia (PN), Italia</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-language"></i>
+                    <h4>Lingue</h4>
+                    <p>ITA (C2), ENG (B2), ALB (Native)</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Parallax effect for floating shapes
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const shapes = document.querySelectorAll('.floating-shape');

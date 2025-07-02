@@ -16,25 +16,25 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
-            color: #1a1a1a;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #2c3e50;
+            background: linear-gradient(135deg, #b8c6db 0%, #f5f7fa 100%);
             min-height: 100vh;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            background: white;
+            background: #fefefe;
             min-height: 100vh;
             position: relative;
-            box-shadow: 0 0 50px rgba(0,0,0,0.1);
+            box-shadow: 0 0 50px rgba(44, 62, 80, 0.1);
         }
 
         /* Decorative elements */
         .floating-shape {
             position: absolute;
             border-radius: 20px;
-            opacity: 0.8;
+            opacity: 0.7;
             pointer-events: none;
             z-index: 1;
         }
@@ -42,7 +42,7 @@
         .shape-1 {
             width: 100px;
             height: 100px;
-            background: linear-gradient(135deg, #00c9ff 0%, #92fe9d 100%);
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
             top: 10%;
             right: 10%;
             transform: rotate(15deg);
@@ -52,7 +52,7 @@
         .shape-2 {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #fc466b 0%, #3f5efb 100%);
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             top: 30%;
             left: 8%;
             transform: rotate(-20deg);
@@ -62,7 +62,7 @@
         .shape-3 {
             width: 120px;
             height: 120px;
-            background: linear-gradient(135deg, #fdbb2d 0%, #22c1c3 100%);
+            background: linear-gradient(135deg, #d35400 0%, #e67e22 100%);
             bottom: 25%;
             right: 5%;
             transform: rotate(25deg);
@@ -72,7 +72,7 @@
         .shape-4 {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            background: linear-gradient(135deg, #7f8c8d 0%, #95a5a6 100%);
             bottom: 40%;
             left: 5%;
             transform: rotate(-15deg);
@@ -82,7 +82,7 @@
         .shape-5 {
             width: 90px;
             height: 90px;
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
             top: 55%;
             right: 15%;
             transform: rotate(45deg);
@@ -109,9 +109,9 @@
             justify-content: space-between;
             align-items: center;
             padding: 25px 60px;
-            background: rgba(255,255,255,0.95);
+            background: rgba(254, 254, 254, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+            border-bottom: 1px solid rgba(192, 57, 43, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -123,7 +123,7 @@
         }
 
         .nav-left a {
-            color: #667eea;
+            color: #2c3e50;
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
@@ -137,7 +137,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            background: linear-gradient(90deg, #c0392b, #e67e22);
             transition: width 0.3s ease;
         }
 
@@ -146,7 +146,7 @@
         }
 
         .nav-left a:hover {
-            color: #764ba2;
+            color: #c0392b;
         }
 
         .nav-right {
@@ -159,19 +159,20 @@
             width: 45px;
             height: 45px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 4px 15px rgba(44, 62, 80, 0.2);
         }
 
         .social-icon:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+            box-shadow: 0 8px 25px rgba(192, 57, 43, 0.3);
         }
 
         .header {
@@ -179,7 +180,7 @@
             text-align: center;
             position: relative;
             z-index: 10;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(192, 57, 43, 0.03) 0%, rgba(230, 126, 34, 0.03) 100%);
         }
 
         .profile-photo {
@@ -187,14 +188,14 @@
             height: 160px;
             border-radius: 50%;
             margin: 0 auto 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 60px;
             color: white;
             position: relative;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 30px rgba(44, 62, 80, 0.3);
             border: 4px solid white;
         }
 
@@ -206,7 +207,7 @@
             right: -8px;
             bottom: -8px;
             border-radius: 50%;
-            background: linear-gradient(45deg, #00c9ff, #92fe9d, #fc466b, #3f5efb);
+            background: linear-gradient(45deg, #c0392b, #e67e22, #27ae60, #2c3e50);
             z-index: -1;
             animation: rotate 3s linear infinite;
         }
@@ -221,7 +222,7 @@
             font-weight: 700;
             line-height: 1.1;
             margin-bottom: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -230,13 +231,13 @@
         .hero-subtitle {
             font-size: clamp(1.5rem, 4vw, 2.5rem);
             font-weight: 400;
-            color: #22c1c3;
+            color: #c0392b;
             margin-bottom: 30px;
         }
 
         .hero-description {
             font-size: 1.1rem;
-            color: #666;
+            color: #5d6d7e;
             max-width: 650px;
             margin: 0 auto;
             line-height: 1.8;
@@ -245,7 +246,7 @@
         .transition-badge {
             display: inline-block;
             padding: 10px 20px;
-            background: linear-gradient(135deg, #fc466b 0%, #3f5efb 100%);
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
             color: white;
             border-radius: 25px;
             font-size: 0.9rem;
@@ -273,7 +274,7 @@
             font-size: 2.5rem;
             font-weight: 600;
             margin-bottom: 50px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -287,7 +288,7 @@
             left: 0;
             width: 60px;
             height: 4px;
-            background: linear-gradient(90deg, #00c9ff, #92fe9d);
+            background: linear-gradient(90deg, #c0392b, #e67e22);
             border-radius: 2px;
         }
 
@@ -298,13 +299,13 @@
 
         .experience-item {
             padding: 35px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%);
+            background: linear-gradient(135deg, rgba(254,254,254,0.9) 0%, rgba(248,249,250,0.9) 100%);
             border-radius: 20px;
-            border: 1px solid rgba(102, 126, 234, 0.1);
+            border: 1px solid rgba(192, 57, 43, 0.15);
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 20px rgba(44, 62, 80, 0.08);
         }
 
         .experience-item::before {
@@ -314,7 +315,7 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #22c1c3);
+            background: linear-gradient(90deg, #c0392b, #e67e22, #27ae60);
             transform: scaleX(0);
             transition: transform 0.4s ease;
         }
@@ -325,7 +326,7 @@
 
         .experience-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.15);
+            box-shadow: 0 15px 35px rgba(192, 57, 43, 0.12);
         }
 
         .job-header {
@@ -340,28 +341,27 @@
         .job-title {
             font-size: 1.4rem;
             font-weight: 600;
-            color: #1a1a1a;
+            color: #2c3e50;
             margin-bottom: 5px;
         }
 
         .company {
             font-size: 1.1rem;
-            color: #667eea;
+            color: #c0392b;
             font-weight: 500;
         }
 
         .date {
-            color: #666;
+            color: white;
             font-size: 0.95rem;
             padding: 8px 16px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             border-radius: 20px;
             font-weight: 500;
         }
 
         .job-description {
-            color: #555;
+            color: #5d6d7e;
             line-height: 1.8;
             font-size: 1rem;
         }
@@ -373,11 +373,11 @@
         }
 
         .skill-category {
-            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%);
+            background: linear-gradient(135deg, rgba(254,254,254,0.9) 0%, rgba(248,249,250,0.9) 100%);
             padding: 35px;
             border-radius: 20px;
-            border: 1px solid rgba(102, 126, 234, 0.1);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border: 1px solid rgba(192, 57, 43, 0.15);
+            box-shadow: 0 5px 20px rgba(44, 62, 80, 0.08);
             transition: transform 0.3s ease;
         }
 
@@ -389,14 +389,14 @@
             font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 25px;
-            color: #1a1a1a;
+            color: #2c3e50;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
         .skill-category h3 i {
-            color: #667eea;
+            color: #c0392b;
         }
 
         .skill-tags {
@@ -407,27 +407,28 @@
 
         .skill-tag {
             padding: 8px 16px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
             border-radius: 25px;
             font-size: 0.9rem;
             font-weight: 500;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(102, 126, 234, 0.2);
+            box-shadow: 0 2px 10px rgba(44, 62, 80, 0.2);
         }
 
         .skill-tag:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+            box-shadow: 0 4px 15px rgba(192, 57, 43, 0.3);
         }
 
         .education-item {
             padding: 30px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%);
+            background: linear-gradient(135deg, rgba(254,254,254,0.9) 0%, rgba(248,249,250,0.9) 100%);
             border-radius: 20px;
-            border-left: 4px solid #22c1c3;
+            border-left: 4px solid #e67e22;
             margin-bottom: 25px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 20px rgba(44, 62, 80, 0.08);
             transition: transform 0.3s ease;
         }
 
@@ -436,7 +437,7 @@
         }
 
         .contact-section {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%);
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
             padding: 80px 60px;
             text-align: center;
@@ -451,7 +452,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(102,126,234,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(192,57,43,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat;
             opacity: 0.3;
         }
 
@@ -465,7 +466,7 @@
 
         .contact-description {
             font-size: 1.2rem;
-            color: #ccc;
+            color: #bdc3c7;
             margin-bottom: 40px;
             max-width: 600px;
             margin-left: auto;
@@ -486,7 +487,7 @@
         .contact-item {
             text-align: center;
             padding: 20px;
-            background: rgba(255,255,255,0.05);
+            background: rgba(192, 57, 43, 0.1);
             border-radius: 15px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255,255,255,0.1);
@@ -499,7 +500,7 @@
 
         .contact-item i {
             font-size: 2rem;
-            color: #667eea;
+            color: #c0392b;
             margin-bottom: 15px;
         }
 
@@ -509,7 +510,7 @@
         }
 
         .contact-item p {
-            color: #ccc;
+            color: #bdc3c7;
         }
 
         @media (max-width: 768px) {
@@ -568,8 +569,8 @@
         <!-- DNA Helix decoration -->
         <div class="dna-helix">
             <svg viewBox="0 0 60 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 10 Q30 50 10 90 Q30 130 10 170 Q30 190 50 190" stroke="#667eea" stroke-width="2" fill="none"/>
-                <path d="M50 10 Q30 50 50 90 Q30 130 50 170 Q30 190 10 190" stroke="#764ba2" stroke-width="2" fill="none"/>
+                <path d="M10 10 Q30 50 10 90 Q30 130 10 170 Q30 190 50 190" stroke="#c0392b" stroke-width="2" fill="none"/>
+                <path d="M50 10 Q30 50 50 90 Q30 130 50 170 Q30 190 10 190" stroke="#e67e22" stroke-width="2" fill="none"/>
             </svg>
         </div>
 
@@ -816,4 +817,68 @@
             
             shapes.forEach((shape, index) => {
                 const speed = 0.3 + (index * 0.1);
-                const
+                const yPos = -(scrolled * speed);
+                shape.style.transform = `translateY(${yPos}px) rotate(${15 + index * 10}deg)`;
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all experience items and skill categories
+        document.querySelectorAll('.experience-item, .skill-category, .education-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Dynamic typing effect for hero subtitle
+        const subtitle = document.querySelector('.hero-subtitle');
+        const roles = ['Biotechnologist & Data Analyst', 'Bioinformatics Enthusiast', 'Machine Learning Explorer'];
+        let currentRole = 0;
+        let currentChar = 0;
+        let isDeleting = false;
+
+        function typeEffect() {
+            const current = roles[currentRole];
+            
+            if (isDeleting) {
+                subtitle.textContent = current.substring(0, currentChar - 1);
+                currentChar--;
+            } else {
+                subtitle.textContent = current.substring(0, currentChar + 1);
+                currentChar++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 100;
+
+            if (!isDeleting && currentChar === current.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && currentChar === 0) {
+                isDeleting = false;
+                currentRole = (currentRole + 1) % roles.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        }
+
+        // Start typing effect after page load
+        setTimeout(typeEffect, 1000);
+    </script>
+</body>
+</html>
